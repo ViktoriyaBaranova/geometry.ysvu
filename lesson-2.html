@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson-2</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+    <img class="rez"  >
+    <a href="index.html" class="logo"> <i class="fas fa-graduation-cap"></i> Геометрия </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="teory.html">Теория</a></li>
+            <li><a href="#">Занятия +</a>
+                <ul>
+                    <li><a href="lesson-1.html">Занятие 01</a></li>
+                    <li><a href="lesson-2.html">Занятие 02</a></li>
+                    <li><a href="lesson-3.html">Занятие 03</a></li>
+                    <li><a href="lesson-4.html">Занятие 04</a></li>
+                    <li><a href="lesson-5.html">Занятие 05</a></li>
+                    <li><a href="lesson-6.html">Занятие 06</a></li>
+                    <li><a href="lesson-8.html">Занятие 07</a></li>                     
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<section class="heading">
+    <h3>Занятие 2. Линейные операции над векторами</h3>
+    <p> <a href="index.html">На главную >></a> Занятие 2 </p>
+</section>
+
+<!-- course-2 section starts  -->
+
+<section class="course-2">
+    <div class="box">
+        <div class="content">
+        <h3>Задание 2.1.</h3>
+        <span>Тренажер на построение</span>
+        <p>Постройте сумму/разность изображенных векторов</p>
+        <a href="./Lesson-2-linear-operations-on-vectors/task-2-1-building-simulator/task_2_1.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="content">
+        <h3>Задание 2.2.</h3>
+        <span>Задание на построение-1</span>
+        <p>Последовательно отложить векторы, удовлетворяющие указанным выражениям</p>
+        <a href="./Lesson-2-linear-operations-on-vectors/task-2-2-building-task/task_2_2.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="content">
+        <h3>Задание 2.3.</h3>
+        <span>Тренажер на построение-2</span>
+        <p>Дана фигура. Изобразите сумму и разность указанной пары векторов</p>
+        <a href="./Lesson-2-linear-operations-on-vectors/task-2-3-building-task/task_2_3.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="content">
+        <h3>Задание 2.4.</h3>
+        <span>Заполните пропуски - 1</span>
+        <p>Пользуясь правилами и законами сложения векторов, упростите выражение</p>
+        <a href="./Lesson-2-linear-operations-on-vectors/task-2-4-fill-the-gaps/task_2_4.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+</section>
+
+<!-- course-2 section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+    <div class="credit"> разработчик: <span>Баранова Виктория Александровна</span> | 2026 </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<!-- отправить переменную из таблицы результатов на главную страницу -->
+<script>
+	let num = null;
+	let r = document.querySelector(".rez");
+	if (localStorage.getItem('rez')) {
+ 		num = localStorage.getItem('rez')
+	}
+	r.src="images/zvaniya"+ Math.floor(num / 10)*10 + ".png";
+
+</script>
+</body>
+</html>
