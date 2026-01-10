@@ -1,0 +1,141 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+table{
+    margin: 20px;
+}
+td{
+    border: 1px solid #414141;
+    padding: 10px 30px;
+    min-width: 100px;
+}
+th{
+    background-color: #414141;
+    color: white;
+    padding: 10px 30px;
+}
+
+input{
+    padding: 1px;
+    width: 70px;
+    border: none;
+    border-color: transparent;
+    border-bottom: 0.12em solid #414141;
+    text-align: center;
+}
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    background-color: #414141;
+    border: 2px solid rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 10px 10px;
+}
+button:active {
+    transform: scale(0.98);
+}
+section.section-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 15px;
+    margin-top: 60px;
+}
+span.span-result{
+    background-color: #DBE1F9;
+}
+canvas{
+    max-width: 1100px;
+    min-width: 1100px;
+    max-height: 315px;
+    min-height: 315px;
+}
+[data-tooltip]::after {
+    left: 110%; top: 50%; /* Положение подсказки */
+} 
+[data-tooltip]:hover::after {
+    top: 50px; /* Положение подсказки */
+}
+
+@media (max-width: 900px) {
+    body{
+        align-items: flex-start;
+        font-size: 75%;
+        text-align: start;
+    }
+    svg{
+        min-width: 300px;
+        margin: auto;
+    }
+    img{
+        width: 25px; 
+        height: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+   section.section-paint img{
+        height: 22px;
+        width: 22px;
+        margin-right: 7px;
+        margin-left: 0px;
+    }
+    .condition{
+        /*margin-left: 34px;*/
+        margin: auto;
+    }
+    section.task{
+        align-items: flex-start;
+    }
+    section.section-result{
+        margin: auto;
+    }
+    [data-tooltip]::after {
+        left: 0%; top: 50%; /* Положение подсказки */
+    } 
+    canvas{
+        margin: 0px 34px;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+    }
+    img.btn-paint{
+        pointer-events: none;
+        opacity: 0.3;
+    }
+    button{
+        font-weight: 800;
+        font-size: 10px;
+        width: 70px;
+    }
+    table{
+        margin: 2px;
+        
+    }
+    td{
+        padding: 5px 5px;
+        min-width: 50px;
+    }
+    th{
+        padding: 5px 5px;
+    }
+
+    input{
+        padding: 1px;
+        max-width: 40px;
+    }
+    tr{
+        padding: 0;
+        margin: 0;
+    }
+}

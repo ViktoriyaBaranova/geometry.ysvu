@@ -1,0 +1,160 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*cursor: none;*/
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+svg{
+    margin-left: 2rem;
+    margin-right: 15px;
+    min-width: 400px;
+    max-width: 500px;
+}
+text{
+    font-size: 8px;
+    stroke: none; 
+    fill: #4479D4;
+    pointer-events: none;
+}
+progress{
+    height: 25px;
+}
+section.section-progress{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.section-progress p{
+    margin: 5px 5px;
+}
+circle{
+    cursor: pointer;
+    opacity: 0;
+}
+
+.section-task{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    width: 55%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    background-color: #414141;
+    border: 2px solid rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 10px 10px;
+}
+button:active {
+    transform: scale(0.98);
+}
+
+.null-vector{
+    width: 130px;
+    margin: 5px 5px;
+    background: #DBE1F9;
+    color: #224bcf; 
+    border-radius: .5rem;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+section.section-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 15px;
+}
+span.span-result{
+    background-color: #DBE1F9;
+}
+
+img{
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+section.section-paint{
+    display: flex;
+    flex-direction: column;
+}
+
+div.header{
+    display: flex;
+    flex-direction: row;
+}
+div.checkbox{
+    align-items: center;
+    margin-left: 10px;
+}
+canvas{
+    max-width: 850px;
+    min-width: 800px;
+    max-height: 420px;
+    min-height: 420px;
+}
+
+@media (max-width: 900px) {
+    body{
+        align-items: flex-start;
+        font-size: 75%;
+        
+    }
+    svg{
+        min-width: 300px;
+        margin: auto;
+    }
+    img{
+        width: 25px; 
+        height: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+   section.section-paint img{
+        height: 22px;
+        width: 22px;
+        margin-right: 7px;
+        margin-left: 0px;
+    }
+    .condition{
+        /*margin-left: 34px;*/
+        margin: auto;
+    }
+    section.task{
+        align-items: flex-start;
+    }
+    section.section-result{
+        margin: auto;
+    }
+    [data-tooltip]::after {
+        left: 0%; top: 50%; /* Положение подсказки */
+    } 
+    canvas{
+        margin: 0px 34px;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+    }
+    img.btn-paint{
+        pointer-events: none;
+        opacity: 0.3;
+    }
+    circle{
+        opacity: 0.15;
+    }
+    button{
+        font-weight: 800;
+        font-size: 10px;
+        width: 70px;
+    }
+}
