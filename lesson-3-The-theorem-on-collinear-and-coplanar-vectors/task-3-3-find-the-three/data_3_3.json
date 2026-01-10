@@ -1,0 +1,14 @@
+const score = 10;
+const numberOfCards = 4;
+const numberOfFlipCards = 3;
+const txtIntro = "Задание на разложение вектора по двум неколлинеарным векторам";
+const cond = ["Задание 3.3. Разложение вектора по двум неколлинеарным векторам", "Составьте тройку: вектор (зеленого цвета) и его разложение."]
+
+const data = [
+    { name: "group-1", imageSrc: ["vect-1r.png", "vect-1y.png", "vect-1g.png"]},
+    { name: "group-2", imageSrc: ["vect-2r.png", "vect-2y.png", "vect-2g.png"] },
+    { name: "group-3", imageSrc: ["vect-3r.png", "vect-3y.png", "vect-3g.png"] },
+    { name: "group-4", imageSrc: ["vect-4r.png", "vect-4y.png", "vect-4g.png"] },
+    { name: "group-5", imageSrc: ["vect-5r.png", "vect-5y.png", "vect-5g.png"] },
+    { name: "group-6", imageSrc: ["vect-6r.png", "vect-6y.png", "vect-6g.png"] },
+];
