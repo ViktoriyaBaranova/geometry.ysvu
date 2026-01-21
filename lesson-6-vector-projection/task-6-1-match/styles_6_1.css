@@ -140,7 +140,9 @@ img.draggable{
     margin: 0;
     height: 200px;
 }
-
+[data-tooltip]::after {
+        left: 0%; top: 20%; 
+    } 
 @media (max-width: 900px) {
     body{
         align-items: flex-start;
@@ -232,4 +234,5 @@ img.draggable{
         margin-bottom: 5px;
         margin-top: 5px;
     }
+
 }
