@@ -1,0 +1,149 @@
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+section.section-task{
+    /*display: flex;
+    flex-direction: column;*/
+    /*width: 100%;*/
+    min-width: 1000px;
+}
+svg{
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.div-task{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   /* height: 240px;*/    
+}
+p.task{
+    margin: 4px 5px;
+    /*pointer-events: none;*/
+    min-width: 300px;
+}
+
+text{
+    font-size: 8px;
+    stroke: none; 
+    fill: #4479D4;
+    pointer-events: none;
+}
+
+circle{
+    cursor: pointer;
+    opacity: 0;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    background-color: #414141;
+    border: 2px solid rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 10px 10px;
+}
+button:active {
+    transform: scale(0.9);
+}
+
+section.section-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 15px;
+}
+span.span-result{
+    background-color: #e8f3e1;
+}
+canvas{
+    max-width: 1000px;
+    min-width: 900px;
+    max-height: 930px;
+    min-height: 930px;
+}
+
+@media (max-width: 900px) {
+    body{
+        align-items: flex-start;
+        font-size: 75%;
+    }
+    img{
+        width: 25px; 
+        height: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+   section.section-paint img{
+        height: 22px;
+        width: 22px;
+        margin-right: 7px;
+        margin-left: 0px;
+    }
+    section.section-paint {
+        max-height: 25px;
+        margin-top: 0;
+        max-width: 25px;
+    }
+    section.section-result{
+        margin: auto;
+    }
+    [data-tooltip]::after {
+        left: 0%; top: 50%; 
+    } 
+    canvas{
+        margin: 0px 34px;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+    }
+    img.btn-paint{
+        pointer-events: none;
+        opacity: 0.3;
+    }
+    .condition{
+        margin: auto;
+       /* min-width: 600px;*/
+    }
+    svg{
+        min-width: 280px;
+        max-width: 280px;
+        margin: 0 34px;
+        /*margin: auto;*/
+    }
+    section.section-result{
+        margin: auto;
+        /*min-width: 600px;*/
+        align-items: center;
+    }
+    section.section-task{
+        display: flex;
+        flex-direction: column;    
+        max-width: 300px;
+    }
+    .div-task{
+        max-width: 300px;
+    }
+    circle{
+        opacity: 0.15;
+    }
+    button{
+        font-weight: 800;
+        font-size: 10px;
+        width: 70px;
+    }
+    
+}
