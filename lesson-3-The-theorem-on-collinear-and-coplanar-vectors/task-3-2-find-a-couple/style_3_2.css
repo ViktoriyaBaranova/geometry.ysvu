@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    /*justify-content: center;
+    align-items: center;*/
+    flex-direction: column;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+.pair{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    grid-auto-rows: repeat(4, 8rem);
+    grid-gap: 2rem;
+}
+
+.card{
+    position: relative;
+}
+.face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    pointer-events: none;
+    border: 1.5px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    padding-left: 1rem;
+    margin-top: 5px;
+}
+input{
+    width: 100px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    border: 1.5px solid black;
+}
+div.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+div.line{
+    background-color: #414141;
+    width: 3px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    padding: 5px 0px;
+    width: 90px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    background-color: #414141;
+    border: 2px solid rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    margin: 10px 10px;
+}
+button:active {
+    transform: scale(0.98);
+}
+
+section.section-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 15px;
+}
+span.span-result{
+    background-color: #e8f3e1;
+}
+canvas{
+    max-width: 1150px;
+    min-width: 1150px;
+    max-height: 450px;
+    min-height: 450px;
+}
+[data-tooltip]::after {
+    left: 800px; top: 50%; /* Положение подсказки */
+} 
+
+@media (max-width: 900px) {
+    body{
+        align-items: flex-start;
+        font-size: 75%;
+        
+    }
+    svg{
+        min-width: 300px;
+        margin: auto;
+    }
+    img{
+        width: 25px; 
+        height: 25px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    }
+   section.section-paint img{
+        height: 22px;
+        width: 22px;
+        margin-right: 7px;
+        margin-left: 0px;
+    }
+    .condition{
+        /*margin-left: 34px;*/
+        margin: auto;
+    }
+    section.task{
+        align-items: flex-start;
+    }
+    section.section-result{
+        margin: auto;
+    }
+    [data-tooltip]::after {
+        left: 0%; top: 50%; /* Положение подсказки */
+    } 
+    canvas{
+        margin: 0px 34px;
+        max-width: 0;
+        max-height: 0;
+        opacity: 0;
+    }
+    img.btn-paint{
+        pointer-events: none;
+        opacity: 0.3;
+    }
+    button{
+        font-weight: 800;
+        font-size: 10px;
+        width: 70px;
+    }
+    .pair{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        grid-template-columns: repeat(2, 75px);
+        grid-auto-rows: repeat(8, 5px);
+        grid-gap: 5px;
+    }
+    .main{
+        margin-left: 3px;
+    }
+    input{
+        width: 50px;
+        margin: 5px 5px;
+        padding: 5px 5px;
+    }
+    div.line{
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    form{
+        width: 100px;
+        padding-left: 5px;
+        margin-top: 5px;
+    }
+}
