@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson-3</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+    <img class="rez"  >
+    <a href="index.html" class="logo"> <i class="fas fa-graduation-cap"></i> Геометрия </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="teory.html">Теория</a></li>
+	    <li><a href="result.html">Результаты</a></li>
+            <li><a href="#">Занятия +</a>
+                <ul>
+                    <li><a href="lesson-1.html">Занятие 01</a></li>
+                    <li><a href="lesson-2.html">Занятие 02</a></li>
+                    <li><a href="lesson-3.html">Занятие 03</a></li>
+                    <li><a href="lesson-4.html">Занятие 04</a></li>
+                    <li><a href="lesson-5.html">Занятие 05</a></li>
+                    <li><a href="lesson-6.html">Занятие 06</a></li>
+                    <li><a href="lesson-8.html">Занятие 07</a></li>                     
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<section class="heading">
+    <h3>Занятие 3. Теоремы о коллинеарных и компланарных векторах. Линейная зависимость векторов</h3>
+    <p> <a href="index.html">На главную >></a> Занятие 3 </p>
+</section>
+
+<!-- course-2 section starts  -->
+
+<section class="course-2">
+
+    <div class="box">
+        <div class="content">
+        <h3>Задание 3.1.</h3>
+        <span>Установите соответствие</span>
+        <p>(10-11 класс) Определите, будут ли компланарны указанные тройки векторов</p>
+        <a href="./lesson-3-The-theorem-on-collinear-and-coplanar-vectors/task-3-1-match/task_3_1.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="content">
+        <h3>Задание 3.2.</h3>
+        <span>Найди пару</span>
+        <p>(9-11 класс) Векторы заданы своими координатами. Найти пары сонаправленных и противоположно направленных векторов и напишите соотношение между векторами каждой пары.</p>
+        <a href="./lesson-3-The-theorem-on-collinear-and-coplanar-vectors/task-3-2-find-a-couple/task_3_2.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+    
+    <div class="box">
+        <div class="content">
+        <h3>Задание 3.3.</h3>
+        <span>Найди тройку</span>
+        <p>(9-11 класс) Выделите такие тройки векторов, которые содержат вектор (зеленого цвета) и его разложение.</p>
+        <a href="./lesson-3-The-theorem-on-collinear-and-coplanar-vectors/task-3-3-find-the-three/task_3_3.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="content">
+        <h3>Задание 3.4.</h3>
+        <span>Draggable list</span>
+        <p>(9-11 класс) Установите верную последовательность в решении задачи</p>
+        <a href="./lesson-3-The-theorem-on-collinear-and-coplanar-vectors/task-3-4-draggable-list/task_3_4.html" class="btn">Выполнить</a>
+        </div>
+    </div>
+</section>
+
+<!-- course-2 section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+    <div class="credit"> разработчик: <span>Баранова Виктория Александровна</span> | 2026 </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<!-- отправить переменную из таблицы результатов на главную страницу -->
+<script>
+    let sumrezult = 0;
+    let r = document.querySelector(".rez");
+    const checkStorage = () =>{
+        for (i=0; i<25; i++){        
+            if (localStorage.getItem(`task-${i}`)){
+                const [m, h] = localStorage.getItem(`task-${i}`).split(",");
+                sumrezult = sumrezult + +m;
+		localStorage.setItem('rez', sumrezult);
+            }
+	};
+	r.src="images/zvaniya"+ Math.floor(sumrezult / 10)*10 + ".png";
+    }
+ 
+    checkStorage(); 
+
+</script>
+</body>
+</html>
